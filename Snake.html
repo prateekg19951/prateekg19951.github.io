@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Google AdSense (YOUR REAL CODE) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9819014009007959"
+        crossorigin="anonymous"></script>
+  
+    <!-- BASIC META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - Play Free Online | Pixel Arcade by prateekg19951</title>
+    <meta name="description" content="Play the classic Snake game online for free! No ads, no download. Eat food, grow longer, beat your high score. Made by prateekg19951">
+    <meta name="keywords" content="snake game, play snake online, free snake game, snake game no ads, classic snake, prateekg19951, pixel arcade">
+    <meta name="author" content="prateekg19951">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://prateekg19951.github.io/snake/">
+
+    <!-- OPEN GRAPH (Facebook, WhatsApp, Discord) -->
+    <meta property="og:title" content="Snake Game - Play Free Online | prateekg19951">
+    <meta property="og:description" content="100% free classic Snake game - zero ads, pure fun! Beat your high score now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prateekg19951.github.io/snake/">
+    <meta property="og:image" content="https://prateekg19951.github.io/snake-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Pixel Arcade">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Snake Game - Play Free Online | prateekg19951">
+    <meta name="twitter:description" content="Classic Snake game - no ads, no download. Just pure nostalgia!">
+    <meta name="twitter:image" content="https://prateekg19951.github.io/snake-og.jpg">
+    <meta name="twitter:creator" content="@prateekg19951">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://prateekg19951.github.io/apple-touch-icon.png">
+
+    <!-- STRUCTURED DATA (Google loves this) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Snake Game - Free Online",
+      "description": "Play the classic Snake game online instantly. No ads, no registration.",
+      "url": "https://prateekg19951.github.io/snake/",
+      "publisher": {
+        "@type": "Person",
+        "name": "prateekg19951"
+      },
+      "inLanguage": "en",
+      "game": {
+        "@type": "VideoGame",
+        "name": "Snake",
+        "gamePlatform": "HTML5",
+        "playMode": "SinglePlayer",
+        "genre": "Arcade"
+      }
+    }
+    </script>
+
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:linear-gradient(135deg,#1a2a6c,#b21f1f,#fdbb2d);font-family:'Segoe UI',sans-serif;color:#fff;min-height:100vh;display:flex;flex-direction:column}
+        
+        /* MENU */
+        .menu{background:rgba(0,0,0,0.5);padding:10px;text-align:center;position:fixed;top:0;left:0;right:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.5);backdrop-filter:blur(10px)}
+        .menu h3{font-size:1rem;color:#fdbb2d;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin:0}
+        .menu ul{list-style:none;margin-top:8px;display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+        .menu a{color:#fff;text-decoration:none;padding:8px 14px;border-radius:12px;font-weight:500;transition:.3s}
+        .menu a:hover{background:#fdbb2d;color:#1a2a6c;font-weight:bold}
+        
+        /* GAME */
+        .game-area{flex:1;display:flex;justify-content:center;align-items:center;padding:20px}
+        .game-container{background:rgba(0,0,0,0.5);padding:30px 40px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.6);backdrop-filter:blur(15px);text-align:center;max-width:480px;width:100%}
+        h1{font-size:2.8rem;margin-bottom:15px;text-shadow:0 4px 15px rgba(0,0,0,0.6)}
+        canvas{background:#111;border:5px solid #fdbb2d;border-radius:14px;box-shadow:0 12px 35px rgba(0,0,0,0.6)}
+        .score{display:flex;justify-content:space-between;margin:20px 0;font-size:1.4rem;font-weight:bold}
+        .info{margin:20px 0;font-size:1rem;opacity:0.9;line-height:1.6}
+        .restart{text-decoration:underline;cursor:pointer;color:#fdbb2d;font-weight:bold}
+        
+        @media(max-width:600px){
+            h1{font-size:2.2rem}
+            canvas{width:300px;height:300px}
+            .game-container{padding:20px}
+            .menu h3{font-size:1.5rem}
+            .menu ul{gap:10px}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENU -->
+    <div class="menu">
+        <h3>Pixel Arcade</h3>
+            <a href="https://prateekg19951.github.io/">Home</a>
+            <a href="https://prateekg19951.github.io/games.html">Games</a>
+       
+    </div>
+
+    <!-- GAME -->
+    <div class="game-area">
+        <div class="game-container">
+            <h1>SNAKE GAME</h1>
+            
+            <div class="score">
+                <span>Score: <span id="score">0</span></span>
+                <span>High Score: <span id="highScore">0</span></span>
+            </div>
+            
+            <canvas id="canvas" width="400" height="400"></canvas>
+            
+            <div class="info">
+                Use <strong>ARROW KEYS</strong> or <strong>WASD</strong> to move<br>
+                Press <span class="restart" onclick="restart()">R</span> to restart
+            </div>
+            
+            <div style="margin-top:30px;font-size:0.95rem;opacity:0.8">
+                Made with Love by <strong>prateekg19951</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- GAME SCRIPT (unchanged) -->
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const scoreElement = document.getElementById('score');
+        const highScoreElement = document.getElementById('highScore');
+        const grid = 20;
+        let count = 0;
+        let score = 0;
+        let highScore = localStorage.getItem('snakeHighScore') || 0;
+        highScoreElement.innerText = highScore;
+        let snake = {x:160,y:160,dx:grid,dy:0,cells:[],maxCells:4};
+        let food = {x:320,y:320};
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        function loop() {
+            requestAnimationFrame(loop);
+            if (++count < 8) return;
+            count = 0;
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            snake.x += snake.dx;
+            snake.y += snake.dy;
+            if (snake.x >= canvas.width) snake.x = 0;
+            if (snake.x < 0) snake.x = canvas.width - grid;
+            if (snake.y >= canvas.height) snake.y = 0;
+            if (snake.y < 0) snake.y = canvas.height - grid;
+            snake.cells.unshift({x: snake.x, y: snake.y});
+            if (snake.cells.length > snake.maxCells) snake.cells.pop();
+            ctx.fillStyle = '#fdbb2d';
+            ctx.fillRect(food.x, food.y, grid-2, grid-2);
+            snake.cells.forEach((cell, index) => {
+                ctx.fillStyle = index === 0 ? '#fff' : '#b21f1f';
+                ctx.fillRect(cell.x, cell.y, grid-2, grid-2);
+                if (cell.x === food.x && cell.y === food.y) {
+                    snake.maxCells++;
+                    score += 10;
+                    scoreElement.innerText = score;
+                    if (score > highScore) {
+                        highScore = score;
+                        highScoreElement.innerText = highScore;
+                        localStorage.setItem('snakeHighScore', highScore);
+                    }
+                    food.x = getRandomInt(0, 20) * grid;
+                    food.y = getRandomInt(0, 20) * grid;
+                }
+                for (let i = index + 1; i < snake.cells.length; i++) {
+                    if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+                        resetGame();
+                    }
+                }
+            });
+        }
+        function resetGame() {
+            snake = {x:160,y:160,dx:grid,dy:0,cells:[],maxCells:4};
+            score = 0;
+            scoreElement.innerText = score;
+            food = {x:getRandomInt(0,20)*grid, y:getRandomInt(0,20)*grid};
+        }
+        function restart() { resetGame(); }
+        document.addEventListener('keydown', e => {
+            if ((e.key === 'ArrowLeft' || e.key === 'a') && snake.dx === 0) { snake.dx = -grid; snake.dy = 0; }
+            else if ((e.key === 'ArrowUp' || e.key === 'w') && snake.dy === 0) { snake.dx = 0; snake.dy = -grid; }
+            else if ((e.key === 'ArrowRight' || e.key === 'd') && snake.dx === 0) { snake.dx = grid; snake.dy = 0; }
+            else if ((e.key === 'ArrowDown' || e.key === 's') && snake.dy === 0) { snake.dx = 0; snake.dy = grid; }
+            else if (e.key === 'r' || e.key === 'R') { restart(); }
+        });
+        requestAnimationFrame(loop);
+    </script>
+</body>
+</html>
