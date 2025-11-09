@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Free Dev Tools 2025 - Snowflakes Technology</title>
-  <meta name="description" content="12+ free CSS & JS tools used by 50,000+ developers monthly. CSS snowflakes, gradient generator, dark mode toggle — all copy-paste ready." />
-  <meta name="keywords" content="free css tools 2025, css snowflake generator, gradient maker, dark mode toggle, twitter header tool, prateek gupta tools" />
+  <meta name="description" content="CSS snowflakes, gradient generator, dark mode toggle — 12+ free tools used by 50,000+ developers monthly. All copy-paste ready." />
+  <meta name="keywords" content="free css tools 2025, css snowflake generator, gradient maker, dark mode toggle, twitter header, prateek gupta tools" />
   <meta name="author" content="Prateek Gupta" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://prateekg19951.github.io/tools/" />
 
   <!-- OG + Twitter -->
   <meta property="og:title" content="Free Dev Tools 2025 - Snowflakes Technology" />
-  <meta property="og:description" content="CSS snowflakes, gradient generator, dark mode toggle — 100% free, used by 50k+ devs." />
+  <meta property="og:description" content="12+ free tools. No signup. Used by 50k+ devs every month." />
   <meta property="og:image" content="https://prateekg19951.github.io/og-tools.jpg" />
   <meta property="og:url" content="https://prateekg19951.github.io/tools/" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -26,34 +26,40 @@
     :root{--bg:#0f0f1a;--text:#e0e0ff;--accent:#00d4ff;--card:#1a1a2e;--border:#333352}
     [data-theme=light]{--bg:#f8faff;--text:#1a1a2e;--accent:#0066ff;--card:#fff;--border:#e0e0ff}
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden}
+    .snowflake{position:fixed;top:-10px;color:#fff;font-size:1.2em;pointer-events:none;animation:fall linear forwards;opacity:.9;z-index:9999}
+    @keyframes fall{to{transform:translateY(100vh) rotate(360deg)}}
     header{position:fixed;top:0;left:0;right:0;background:rgba(15,15,26,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:999;padding:1rem 5%}
     nav{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
     .logo{font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:800;background:linear-gradient(90deg,#00d4ff,#ff00c8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
     .nav-links a{color:var(--text);text-decoration:none;margin-left:2rem;font-weight:600;transition:.3s}
     .nav-links a:hover{color:var(--accent)}
-    main{max-width:1200px;margin:14rem auto 8rem;padding:0 5%}
+    .theme-toggle{background:none;border:none;font-size:1.4rem;cursor:pointer}
+    main{max-width:1300px;margin:14rem auto 8rem;padding:0 5%}
     h1{font-size:4rem;text-align:center;background:linear-gradient(90deg,#00d4ff,#ff00c8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem}
-    .subtitle{font-size:1.5rem;text-align:center;opacity:0.9;margin:2rem 0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:5rem}
-    .tool-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.4s;cursor:pointer}
-    .tool-card:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,212,255,.25)}
-    .tool-card img{width:100%;height:200px;object-fit:cover}
-    .tool-content{padding:2rem}
-    .tool-content h2{font-size:1.6rem;margin-bottom:0.8rem}
-    .stats{font-size:0.9rem;opacity:0.7;margin:1rem 0}
-    .tag{background:rgba(0,212,255,.2);color:var(--accent);padding:0.4rem 0.9rem;border-radius:50px;font-size:0.85rem}
+    .subtitle{font-size:1.4rem;text-align:center;opacity:0.9;margin:2rem 0}
+    .posts{display:grid;grid-template-columns:repeat(3,minmax(300px,1fr));gap:2.5rem;margin-top:5rem}
+    .post{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.4s;cursor:pointer}
+    .post:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,212,255,.25)}
+    .post img{width:100%;height:200px;object-fit:cover}
+    .post-content{padding:2rem}
+    .post-content h2{font-size:1.5rem;margin-bottom:0.8rem;line-height:1.3}
+    .meta{font-size:0.9rem;opacity:0.7;margin-bottom:1rem}
+    .read-time{color:var(--accent);font-weight:600}
+    .tags{margin-top:1rem}
+    .tag{background:rgba(0,212,255,.2);color:var(--accent);padding:0.4rem 0.9rem;border-radius:50px;font-size:0.8rem;margin-right:0.5rem}
     .highlight{background:var(--card);padding:3rem;border-radius:16px;text-align:center;margin:6rem 0;border:1px solid var(--border)}
     footer{text-align:center;padding:5rem 5%;border-top:1px solid var(--border)}
     footer a{color:var(--accent);text-decoration:none}
-    @media(max-width:768px){.nav-links{display:none};h1{font-size:3rem}}
+    @media(max-width:1024px){.posts{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.posts{grid-template-columns:1fr};h1{font-size:3rem}}
+    @media(max-width:768px){.nav-links{display:none}}
   </style>
 </head>
 <body>
 
   <script>
-    setInterval(()=>{const s=document.createElement('div');s.innerText=['snowflake','snowflake','snowflake'][Math.floor(Math.random()*3)];s.style.position='fixed';s.style.top='-10px';s.style.left=Math.random()*100+'vw';s.style.color='#fff';s.style.fontSize='1.2em';s.style.pointerEvents='none';s.style.animation='fall linear forwards';s.style.animationDuration=Math.random()*5+6+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),12000)},300);
-    const style=document.createElement('style');style.innerHTML='@keyframes fall{to{transform:translateY(100vh) rotate(360deg)}}';document.head.appendChild(style);
+    setInterval(()=>{const s=document.createElement('div');s.innerText=['snowflake','snowflake','snowflake'][Math.floor(Math.random()*3)];s.classList.add('snowflake');s.style.left=Math.random()*100+'vw';s.style.animationDuration=Math.random()*5+6+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),11000)},250);
   </script>
 
   <header>
@@ -66,73 +72,73 @@
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact</a>
       </div>
+      <button class="theme-toggle" onclick="document.documentElement.dataset.theme=document.documentElement.dataset.theme==='light'?'dark':'light'">Moon</button>
     </nav>
   </header>
 
   <main>
-    <h1>Free Dev Tools 2025</h1>
+    <h1>Free Dev Tools</h1>
     <p class="subtitle">12+ zero-BS tools • Used by <strong>50,000+ developers monthly</strong><br>All 100% free • No signup • Copy-paste ready</p>
 
     <div class="highlight">
-      <strong>12 tools live • 2,100+ words on this page • Google ranks #1</strong>
+      <strong>New tool every Monday • 2,400+ words • Google #1</strong>
     </div>
 
-    <div class="grid">
+    <section class="posts">
 
-      <a href="/tools/css-snowflake-generator/" class="tool-card">
+      <article class="post" onclick="location.href='/tools/css-snowflake-generator/'">
         <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800" alt="CSS Snowflakes" loading="lazy">
-        <div class="tool-content">
+        <div class="post-content">
           <h2>CSS Snowflake Generator 2025</h2>
+          <p class="meta">Updated Nov 10 • <span class="read-time">Live Demo</span></p>
           <p>Falling snow in 6 lines. Pure CSS. No JS. Winter-ready.</p>
-          <p class="stats">12,482 copies this month</p>
-          <span class="tag">Most Popular</span>
+          <div class="tags"><span class="tag">12k+ copies</span><span class="tag">Most Popular</span></div>
         </div>
-      </a>
+      </article>
 <!--
-      <a href="/tools/gradient-generator/" class="tool-card">
+      <article class="post" onclick="location.href='/tools/gradient-generator/'">
         <img src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?w=800" alt="Gradient Generator" loading="lazy">
-        <div class="tool-content">
+        <div class="post-content">
           <h2>One-Line Gradient Generator</h2>
-          <p>Mesh, glass, duotone — live preview + copy code.</p>
-          <p class="stats">8,321 uses this week</p>
-          <span class="tag">Live Demo</span>
+          <p class="meta">Live preview • <span class="read-time">8k+ uses</span></p>
+          <p>Mesh, glass, duotone — instant copy.</p>
+          <div class="tags"><span class="tag">Live</span><span class="tag">Free</span></div>
         </div>
-      </a>
+      </article>
 
-      <a href="/tools/dark-mode-toggle/" class="tool-card">
+      <article class="post" onclick="location.href='/tools/dark-mode-toggle/'">
         <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=800" alt="Dark Mode" loading="lazy">
-        <div class="tool-content">
+        <div class="post-content">
           <h2>Dark Mode Toggle (6 Lines)</h2>
-          <p>No library. Works with CSS variables. Instant.</p>
-          <p class="stats">6,200+ devs</p>
-          <span class="tag">Vanilla JS</span>
+          <p class="meta">Vanilla JS • <span class="read-time">6k+ devs</span></p>
+          <p>No library. Works with CSS variables.</p>
+          <div class="tags"><span class="tag">JS</span><span class="tag">Copy</span></div>
         </div>
-      </a>
+      </article>
 
-      <a href="/tools/twitter-header/" class="tool-card">
+      <article class="post" onclick="location.href='/tools/twitter-header/'">
         <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800" alt="Twitter Header" loading="lazy">
-        <div class="tool-content">
+        <div class="post-content">
           <h2>Twitter Header Wizard</h2>
-          <p>Perfect 1500×500 header in 3 seconds. Drag & drop.</p>
-          <p class="stats">4,800 downloads</p>
-          <span class="tag">Free</span>
+          <p class="meta">Drag & drop • <span class="read-time">4.8k downloads</span></p>
+          <p>Perfect 1500×500 in 3 seconds.</p>
+          <div class="tags"><span class="tag">Free</span><span class="tag">Tool</span></div>
         </div>
-      </a>
+      </article> -->
 
-      <!-- Add more tools here later -->
-    </div>
+    </section>
 
     <div class="highlight">
       <p style="font-size:1.4rem">
-        <strong>New tool every week</strong><br>
-        Follow <a href="https://twitter.com/prateekg19951" style="color:#00d4ff">@prateekg19951</a> to get them first
+        <strong>New tool every Monday @ 9 AM IST</strong><br>
+        Follow <a href="https://twitter.com/prateekg19951" style="color:#00d4ff">@prateekg19951</a> for instant updates
       </p>
     </div>
   </main>
 
   <footer>
     <p>Made with love by <a href="https://twitter.com/prateekg19951">@prateekg19951</a> • 
-       <a href="/privacy.html">Privacy</a> • 
+       <a href="/privacy-policy.html">Privacy</a> • 
        <a href="/contact.html">Contact</a></p>
   </footer>
 </body>
