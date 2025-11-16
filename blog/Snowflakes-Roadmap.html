@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <!-- Core Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowflake Learning Roadmap 2025: Beginner to Advanced (Free Guide)</title>
+    <meta name="description" content="Master Snowflake in 3–6 months with this free, hands-on roadmap. 16 modules: SQL, Snowpark, SnowPro prep, data pipelines. 2025 updated.">
+    <meta name="keywords" content="snowflake roadmap 2025, learn snowflake, snowpro core, snowpark tutorial, snowflake beginner guide, data engineering">
+    <meta name="author" content="Prateek Gupta">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://snowflakes.tech/roadmap.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Snowflake Learning Roadmap 2025: Beginner to Advanced">
+    <meta property="og:description" content="Free 16-module guide to go from zero to SnowPro. Hands-on labs, SQL, Snowpark, pipelines.">
+    <meta property="og:url" content="https://snowflakes.tech/roadmap.html">
+    <meta property="og:site_name" content="Snowflakes Tech">
+    <meta property="og:image" content="https://snowflakes.tech/og-snowflake-roadmap.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Snowflake Roadmap 2025: Beginner to Advanced Guide">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@prateekg19951">
+    <meta name="twitter:creator" content="@prateekg19951">
+    <meta name="twitter:title" content="Snowflake Learning Roadmap 2025">
+    <meta name="twitter:description" content="Free 16-module guide to go from zero to SnowPro. Hands-on labs, SQL, Snowpark, pipelines.">
+    <meta name="twitter:image" content="https://snowflakes.tech/og-snowflake-roadmap.jpg">
+
+    <!-- Structured Data (LearningResource + FAQ) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LearningResource",
+      "name": "Snowflake Learning Roadmap 2025",
+      "description": "Step-by-step guide from beginner to advanced Snowflake skills in 3-6 months.",
+      "educationalLevel": "Beginner to Advanced",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Prateek Gupta",
+        "url": "https://twitter.com/prateekg19951"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Snowflakes Tech"
+      },
+      "hasPart": [
+        {"@type": "HowToStep", "name": "Beginner Level"},
+        {"@type": "HowToStep", "name": "Intermediate Level"},
+        {"@type": "HowToStep", "name": "Advanced Level"}
+      ],
+      "about": {
+        "@type": "Thing",
+        "name": "Snowflake Data Cloud"
+      },
+      "educationalUse": "Self-paced learning",
+      "timeRequired": "PT3M"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long to learn Snowflake from scratch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3–6 months with consistent practice (2–3 hours/day). This roadmap covers beginner to SnowPro level."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Snowflake free to learn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Use Snowflake free trial ($400 credits) + public datasets. No credit card needed for learning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need SQL to start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basic SQL helps, but Module 3 teaches Snowflake SQL from scratch."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Fonts (Minimal) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Minimal CSS (Under 3KB) -->
+    <style>
+        :root{--bg:#0f0f1a;--text:#e0e0ff;--accent:#00d4ff;--card:#1a1a2e;--border:#333352}
+        [data-theme=light]{--bg:#f8faff;--text:#1a1a2e;--accent:#0066ff;--card:#fff;--border:#e0e0ff}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
+        header{position:fixed;top:0;left:0;right:0;background:rgba(15,15,26,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:1000;padding:1rem 5%}
+        nav{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+        .logo{font-weight:700;font-size:1.4rem;background:linear-gradient(90deg,#00d4ff,#ff00c8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .nav-links a{color:var(--text);text-decoration:none;margin:0 .8rem;font-weight:600;font-size:.95rem}
+        .theme-toggle{background:none;border:none;font-size:1.3rem;cursor:pointer}
+        main{max-width:900px;margin:11rem auto 6rem;padding:0 5%}
+        h1{font-size:2.8rem;text-align:center;background:linear-gradient(90deg,#00d4ff,#ff00c8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.5rem}
+        .meta{text-align:center;opacity:.8;font-size:1rem;margin:1.5rem 0}
+        .highlight{background:rgba(0,212,255,.1);padding:1.2rem;border-radius:10px;border-left:4px solid var(--accent);margin:1.5rem 0;font-size:.95rem}
+        .level{margin:3rem 0 1rem;font-size:1.8rem;background:linear-gradient(90deg,#00d4ff,#ff00c8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
+        table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:var(--card);border-radius:10px;overflow:hidden}
+        th{background:rgba(0,212,255,.1);padding:.9rem;text-align:left;font-weight:600;color:var(--accent);font-size:.9rem}
+        td{padding:.9rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        tr:last-child td{border:none}
+        .btn{display:inline-block;background:var(--accent);color:#000;padding:.8rem 1.8rem;border-radius:50px;text-decoration:none;font-weight:600;margin:1.5rem 0;transition:transform .2s}
+        .btn:hover{transform:translateY(-2px)}
+        pre{background:#000;padding:1.2rem;border-radius:10px;overflow-x:auto;border:1px solid var(--border);font-family:monospace;font-size:.85rem;margin:1.5rem 0}
+        footer{text-align:center;padding:4rem 5%;border-top:1px solid var(--border);font-size:.85rem}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:768px){
+            h1{font-size:2.2rem}
+            main{margin-top:10rem}
+            .nav-links{flex-wrap:wrap;gap:.5rem}
+            .nav-links a{margin:0 .4rem;font-size:.85rem}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Snowflakes Tech</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/tools/">Tools</a>
+            <a href="/blog/">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <button class="theme-toggle" onclick="document.documentElement.dataset.theme=document.documentElement.dataset.theme==='light'?'dark':'light'" aria-label="Toggle theme">Toggle</button>
+    </nav>
+</header>
+
+<main>
+    <h1>Snowflake Learning Roadmap 2025</h1>
+    <p class="meta">Free • Hands-On • 16 Modules • Beginner to SnowPro</p>
+
+    <div class="highlight">
+        <strong>Start Free Trial:</strong> <a href="https://signup.snowflake.com/" target="_blank" style="color:var(--accent)">Get $400 Credits</a><br>
+        <strong>Practice Data:</strong> TPC-H, Kaggle, Snowflake Sample DBs
+    </div>
+
+    <h2 id="beginner" class="level">Beginner (Months 1–2)</h2>
+    <table>
+        <tr><th>#</th><th>Topic</th><th>Focus</th><th>Hands-On</th><th>Resources</th></tr>
+        <tr><td>1</td><td>What is Snowflake?</td><td>Architecture</td><td>UI Tour</td><td><a href="https://docs.snowflake.com" style="color:var(--accent)">Docs</a></td></tr>
+        <tr><td>2</td><td>Account Setup</td><td>Trial, Roles</td><td>Create DB</td><td>Snowflake 20 Mins</td></tr>
+        <tr><td>3</td><td>SQL Basics</td><td>SELECT, JSON</td><td>Query TPC-H</td><td>DataCamp</td></tr>
+        <tr><td>4</td><td>Data Loading</td><td>COPY INTO</td><td>Upload CSV</td><td>Snowflake Labs</td></tr>
+    </table>
+
+    <h2 id="intermediate" class="level">Intermediate (Months 3–4)</h2>
+    <table>
+        <tr><th>#</th><th>Topic</th><th>Focus</th><th>Hands-On</th><th>Resources</th></tr>
+        <tr><td>5</td><td>Data Modeling</td><td>Star Schema</td><td>Retail Model</td><td>Nevolearn</td></tr>
+        <tr><td>6</td><td>ETL/ELT</td><td>CTAS, MERGE</td><td>E-commerce</td><td>DataCamp</td></tr>
+        <tr><td>7</td><td>Security</td><td>RBAC</td><td>Test Access</td><td>Security Docs</td></tr>
+        <tr><td>8</td><td>Performance</td><td>Warehouse</td><td>Optimize Query</td><td>Level Up</td></tr>
+        <tr><td>9</td><td>Time Travel</td><td>Clone</td><td>Recover Data</td><td>DataCamp</td></tr>
+    </table>
+
+    <h2 id="advanced" class="level">Advanced (Months 5–6)</h2>
+    <table>
+        <tr><th>#</th><th>Topic</th><th>Focus</th><th>Hands-On</th><th>Resources</th></tr>
+        <tr><td>10</td><td>BI & APIs</td><td>Tableau</td><td>Dashboard</td><td>Integration Docs</td></tr>
+        <tr><td>11</td><td>Semi-Structured</td><td>JSON</td><td>Flatten</td><td>Advanced SQL</td></tr>
+        <tr><td>12</td><td>Snowpark</td><td>Python UDF</td><td>Sentiment</td><td>Snowpark Docs</td></tr>
+        <tr><td>13</td><td>Automation</td><td>Snowpipe</td><td>Real-time</td><td>Automation Labs</td></tr>
+        <tr><td>14</td><td>Data Sharing</td><td>Marketplace</td><td>Secure Share</td><td>Marketplace</td></tr>
+        <tr><td>15</td><td>SnowPro Core</td><td>Exam Prep</td><td>Practice Tests</td><td><a href="https://snowprocore.snowflake.com" style="color:var(--accent)">Portal</a></td></tr>
+        <tr><td>16</td><td>Projects</td><td>Portfolio</td><td>3–5 Apps</td><td>GitHub + Kaggle</td></tr>
+    </table>
+
+    <div class="highlight" id="cert">
+        <h3>SnowPro Certification</h3>
+        <ul>
+            <li><strong>Core</strong>: $175, 100 Qs</li>
+            <li><strong>Advanced</strong>: Architect / Engineer</li>
+            <li><strong>Portfolio</strong>: GitHub demos</li>
+        </ul>
+    </div>
+
+    <a href="https://signup.snowflake.com/" class="btn" target="_blank">Start Free Trial ($400)</a>
+
+    <pre>USE DEMO_DB;
+CREATE TABLE users (id INT, data VARIANT);
+COPY INTO users FROM @~/data.csv;
+SELECT * FROM users WHERE data:age > 25;</pre>
+</main>
+
+<footer>
+    <p>Made with ❤️ by <a href="https://twitter.com/prateekg19951">@prateekg19951</a> • <a href="/privacy-policy.html">Privacy</a> • <a href="/contact.html">Contact</a></p>
+</footer>
+
+</body>
+</html>
