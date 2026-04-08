@@ -21,190 +21,271 @@
 <meta property="og:title" content="Prateek Gupta | Data Geek Portfolio">
 <meta property="og:description" content="I manipulate data, build insights, and explore trading & entrepreneurship.">
 <meta property="og:type" content="website">
+	<style>
+		body {
+			margin: 0;
+			font-family: 'Courier New', monospace;
+			background: #0f172a;
+			color: #e2e8f0;
+		}
+		
+	/* 🌌 PARTICLES BACKGROUND */
+	#particles {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		top: 0;
+		left: 0;
+	}
 
-<style>
-    body {
-        margin: 0;
-        font-family: 'Courier New', monospace;
-        background: #0f172a;
-        color: #e2e8f0;
-    }
+		header {
+			height: 60vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		  
+		}
 
-    header {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: radial-gradient(circle, #1e293b, #020617);
-    }
+		h1 {
+			font-size: 3rem;
+			color: #38bdf8;
+			text-shadow: 0 0 20px #38bdf8;
+		}
 
-    h1 {
-        font-size: 3rem;
-        color: #38bdf8;
-        text-shadow: 0 0 20px #38bdf8;
-    }
+		.tagline {
+			font-size: 1.3rem;
+			margin-top: 10px;
+			color: #94a3b8;
+		}
 
-    .tagline {
-        font-size: 1.3rem;
-        margin-top: 10px;
-        color: #94a3b8;
-    }
+		.highlight {
+			color: #22c55e;
+			font-weight: bold;
+		}
 
-    .highlight {
-        color: #22c55e;
-        font-weight: bold;
-    }
+		section {
+			padding: 10px 20px;
+			max-width: 900px;
+			margin: auto;
+		}
 
-    section {
-        padding: 10px 20px;
-        max-width: 900px;
-        margin: auto;
-    }
+		h2 {
+			color: #38bdf8;
+			border-left: 4px solid #38bdf8;
+			padding-left: 10px;
+		}
 
-    h2 {
-        color: #38bdf8;
-        border-left: 4px solid #38bdf8;
-        padding-left: 10px;
-    }
+		.card {
+			background: #1e293b;
+			padding: 20px;
+			margin-top: 20px;
+			border-radius: 10px;
+			transition: 0.3s;
+		}
 
-    .card {
-        background: #1e293b;
-        padding: 20px;
-        margin-top: 20px;
-        border-radius: 10px;
-        transition: 0.3s;
-    }
+		.card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 0 20px rgba(56,189,248,0.4);
+		}
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 20px rgba(56,189,248,0.4);
-    }
+		.skills span {
+			display: inline-block;
+			background: #020617;
+			padding: 8px 12px;
+			margin: 5px;
+			border-radius: 20px;
+			border: 1px solid #38bdf8;
+		}
 
-    .skills span {
-        display: inline-block;
-        background: #020617;
-        padding: 8px 12px;
-        margin: 5px;
-        border-radius: 20px;
-        border: 1px solid #38bdf8;
-    }
+		footer {
+			text-align: center;
+			padding: 30px;
+			color: #64748b;
+		}
 
-    footer {
-        text-align: center;
-        padding: 30px;
-        color: #64748b;
-    }
+		a {
+			color: #22c55e;
+			text-decoration: none;
+		}
 
-    a {
-        color: #22c55e;
-        text-decoration: none;
-    }
+		.social a {
+			margin: 0 10px;
+			display: inline-block;
+		}
+	</style>
 
-    .social a {
-        margin: 0 10px;
-        display: inline-block;
-    }
-</style>
+	</head>
 
-</head>
+	<body>
 
-<body>
+	<canvas id="particles"></canvas>
 
-<header>
-    <h1>Prateek Gupta</h1>
-    <p class="tagline">
-        Data Geek ⚡ | Trader 📈 | Entrepreneur 🚀
-    </p>
-    <p>
-        I <span class="highlight">manipulate data</span>, build insights,  
-        and turn chaos into clarity.
-    </p>
+	<header>
+		<h1>Prateek Gupta</h1>
+		<p class="tagline">
+			Data Geek ⚡ | Trader 📈 | Entrepreneur 🚀
+		</p>
+		<p>
+			I <span class="highlight">manipulate data</span>, build insights,  
+			and turn chaos into clarity.
+		</p>
 
-    <div class="social">
-        <a href="https://www.instagram.com/purelyprateek" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/in/prateekg19951" target="_blank">LinkedIn</a>
-    </div>
-</header>
+		<div class="social">
+			<a href="https://www.instagram.com/purelyprateek" target="_blank">Instagram</a>
+			<a href="https://www.linkedin.com/in/prateekg19951" target="_blank">LinkedIn</a>
+		</div>
+	</header>
 
-<section>
-    <h2>🧠 About Me</h2>
-    <div class="card">
-        <p>
-            I’m someone who doesn’t just look at data — I play with it.  
-            I break it, rebuild it, and extract meaning where others see noise.
-        </p>
-        <p>
-            By day, I work with dashboards, automation, and analytics.  
-            By night, I explore trading strategies and business ideas.
-        </p>
-        <p>
-            I love meeting new people, making connections, and building ideas that matter.
-        </p>
-    </div>
-</section>
+	<section>
+		<h2>🧠 About Me</h2>
+		<div class="card">
+			<p>
+				I’m someone who doesn’t just look at data — I play with it.  
+				I break it, rebuild it, and extract meaning where others see noise.
+			</p>
+			<p>
+				By day, I work with dashboards, automation, and analytics.  
+				By night, I explore trading strategies and business ideas.
+			</p>
+			<p>
+				I love meeting new people, making connections, and building ideas that matter.
+			</p>
+		</div>
+	</section>
 
-<section>
-    <h2>⚡ What I Do</h2>
-    <div class="card">
-        <ul>
-            <li>📊 Data Analyst & Power BI Developer</li>
-            <li>🤖 Automation & Process Optimization</li>
-            <li>🧠 Data Analysis & Insights Generation</li>
-            <li>📈 Stock Market Trading & Strategy Testing</li>
-            <li>🚀 Entrepreneurial Thinking & Problem Solving</li>
-        </ul>
-    </div>
-</section>
+	<section>
+		<h2>⚡ What I Do</h2>
+		<div class="card">
+			<ul>
+				<li>📊 Data Analyst & Power BI Developer</li>
+				<li>🤖 Automation & Process Optimization</li>
+				<li>🧠 Data Analysis & Insights Generation</li>
+				<li>📈 Stock Market Trading & Strategy Testing</li>
+				<li>🚀 Entrepreneurial Thinking & Problem Solving</li>
+			</ul>
+		</div>
+	</section>
 
-<section>
-    <h2>🛠 Tech Stack</h2>
-    <div class="card skills">
-        <span>Power BI</span>
-        <span>SQL</span>
-        <span>Advanced Excel</span>
-        <span>Python</span>
-        <span>ETL Tools</span>
-        <span>Google Sheets</span>
-    </div>
-</section>
+	<section>
+		<h2>🛠 Tech Stack</h2>
+		<div class="card skills">
+			<span>Power BI</span>
+			<span>SQL</span>
+			<span>Advanced Excel</span>
+			<span>Python</span>
+			<span>ETL Tools</span>
+			<span>Google Sheets</span>
+		</div>
+	</section>
 
-<section>
-    <h2>🌍 My Mindset</h2>
-    <div class="card">
-        <p>
-            "Data is not just numbers — it's a hidden story waiting to be decoded."
-        </p>
-        <p>
-            I believe in smart systems, continuous learning, and leveraging data to make better decisions.
-        </p>
-    </div>
-</section>
+	<section>
+		<h2>🌍 My Mindset</h2>
+		<div class="card">
+			<p>
+				"Data is not just numbers — it's a hidden story waiting to be decoded."
+			</p>
+			<p>
+				I believe in smart systems, continuous learning, and leveraging data to make better decisions.
+			</p>
+		</div>
+	</section>
 
-<section>
-    <h2>🤝 Connect With Me</h2>
-    <div class="card">
-        <p>Email: prateekg19951@gmail.com</p>
-        <p>Phone: +91-8439999933</p>
-        <p>
-            Instagram: 
-            <a href="https://www.instagram.com/purelyprateek" target="_blank">
-                @purelyprateek
-            </a>
-        </p>
-        <p>
-            LinkedIn: 
-            <a href="https://www.linkedin.com/in/prateekg19951" target="_blank">
-                View Profile
-            </a>
-        </p>
-    </div>
-</section>
+	<section>
+		<h2>🤝 Connect With Me</h2>
+		<div class="card">
+			<p>Email: prateekg19951@gmail.com</p>
+			<p>Phone: +91-8439999933</p>
+			<p>
+				Instagram: 
+				<a href="https://www.instagram.com/purelyprateek" target="_blank">
+					@purelyprateek
+				</a>
+			</p>
+			<p>
+				LinkedIn: 
+				<a href="https://www.linkedin.com/in/prateekg19951" target="_blank">
+					View Profile
+				</a>
+			</p>
+		</div>
+	</section>
 
-<footer>
-    <p>⚡ Built with curiosity, data & ambition</p>
-</footer>
+	<footer>
+		<p>⚡ Built with curiosity, data & ambition</p>
+	</footer>
 
-</body>
-</html>
+	<script>
+	const canvas = document.getElementById("particles");
+	const ctx = canvas.getContext("2d");
+
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+
+	let particlesArray = [];
+	const numberOfParticles = 100;
+
+	// create particles
+	for (let i = 0; i < numberOfParticles; i++) {
+		particlesArray.push({
+			x: Math.random() * canvas.width,
+			y: Math.random() * canvas.height,
+			size: 2,
+			speedX: Math.random() - 0.5,
+			speedY: Math.random() - 0.5
+		});
+	}
+
+	function connectParticles() {
+		for (let a = 0; a < particlesArray.length; a++) {
+			for (let b = a; b < particlesArray.length; b++) {
+				let dx = particlesArray[a].x - particlesArray[b].x;
+				let dy = particlesArray[a].y - particlesArray[b].y;
+				let distance = dx * dx + dy * dy;
+
+				if (distance < 12000) {
+					ctx.strokeStyle = "rgba(56,189,248,0.15)";
+					ctx.lineWidth = 1;
+					ctx.beginPath();
+					ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+					ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+					ctx.stroke();
+				}
+			}
+		}
+	}
+
+	function animateParticles() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+		particlesArray.forEach(p => {
+			p.x += p.speedX;
+			p.y += p.speedY;
+
+			if (p.x > canvas.width || p.x < 0) p.speedX *= -1;
+			if (p.y > canvas.height || p.y < 0) p.speedY *= -1;
+
+			// glow
+			ctx.shadowBlur = 8;
+			ctx.shadowColor = "#38bdf8";
+
+			ctx.fillStyle = "#38bdf8";
+			ctx.fillRect(p.x, p.y, p.size, p.size);
+		});
+
+		connectParticles();
+		requestAnimationFrame(animateParticles);
+	}
+
+	animateParticles();
+
+	window.addEventListener("resize", () => {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+	});
+	</script>
+
+	</body>
+	</html>
