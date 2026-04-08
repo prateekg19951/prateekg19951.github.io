@@ -11,189 +11,202 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- ====== SEO TITLE & DESCRIPTION (this is what ranks) ====== -->
-	<title>Snowflakes Technology - Free CSS Tools, One-Line Tricks & Dev Tutorials 2025</title>
-	<meta name="description" content="Free CSS snowflake generator, gradient maker, dark mode toggle in 6 lines. Zero-BS dev tools that 50,000+ developers use monthly. Updated Nov 2025." />
-	<meta name="keywords" content="css snowflake generator, free gradient maker, dark mode toggle, github pages saas, one line css tricks, free dev tools 2025, twitter header maker, snowflakes technology" />
-	<meta name="author" content="Prateek Gupta" />
-	<meta name="robots" content="index, follow" />
-  
-  <!-- ====== OPEN GRAPH (makes your link look $1M on Twitter/Reddit) ====== -->
-  <meta property="og:title" content="Snowflakes Technology - Free Dev Tools That Actually Work" />
-  <meta property="og:description" content="CSS snowflakes, gradient generator, Twitter header maker — all free, no sign-up, copy-paste ready." />
-  <meta property="og:image" content="https://prateekg19951.github.io/og-image.jpg" />
-  <meta property="og:url" content="https://prateekg19951.github.io" />
-  <meta property="og:type" content="website" />
+	<!-- 🔍 SEO Meta -->
+<title>Prateek Gupta | Data Analyst | Power BI | Data Geek</title>
+<meta name="description" content="Prateek Gupta - Data Analyst & MIS Analyst skilled in Power BI, SQL, and automation. Data geek, trader, and entrepreneur passionate about turning data into insights.">
+<meta name="keywords" content="Prateek Gupta, Data Analyst, MIS Analyst, Power BI Developer, SQL, Data Visualization, Excel Expert, Data Geek India">
+<meta name="author" content="Prateek Gupta">
 
-  <!-- ====== TWITTER CARD ====== -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@prateekg19951" />
+<!-- 🌍 Open Graph (for LinkedIn sharing) -->
+<meta property="og:title" content="Prateek Gupta | Data Geek Portfolio">
+<meta property="og:description" content="I manipulate data, build insights, and explore trading & entrepreneurship.">
+<meta property="og:type" content="website">
 
-  <!-- ====== FAVICON + APPLE TOUCH ====== -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❄️</text></svg>">
-  <link rel="apple-touch-icon" href="https://prateekg19951.github.io/apple-touch-icon.png" />
+<title>Prateek Gupta | Data Geek</title>
 
-  <!-- ====== CANONICAL (prevents duplicate penalty) ====== -->
-  <link rel="canonical" href="https://prateekg19951.github.io/" />
-
-  <!-- ====== GOOGLE FONTS (preloaded = 100/100 speed) ====== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- ====== STRUCTURED DATA (Google shows stars + rich snippet) ====== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Snowflakes Technology",
-    "url": "https://prateekg19951.github.io",
-    "description": "Free web dev tools and tutorials",
-    "author": {
-      "@type": "Person",
-      "name": "Prateek Gupta",
-      "url": "https://twitter.com/prateekg19951"
+<style>
+    body {
+        margin: 0;
+        font-family: 'Courier New', monospace;
+        background: #0f172a;
+        color: #e2e8f0;
     }
-  }
-  </script>
 
-  <!-- ====== CSS (100/100 Lighthouse guaranteed) ====== -->
-  <style>
-    :root{--bg:#0f0f1a;--text:#e0e0ff;--accent:#00d4ff;--card:#1a1a2e;--border:#333352}
-    [data-theme=light]{--bg:#f8faff;--text:#1a1a2e;--accent:#0066ff;--card:#fff;--border:#e0e0ff}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-    .snowflake{position:fixed;top:-10px;color:#fff;font-size:1.2em;pointer-events:none;animation:fall linear forwards;opacity:.9;z-index:9999}
-    @keyframes fall{to{transform:translateY(100vh) rotate(360deg)}}
-    header{position:fixed;top:0;left:0;right:0;background:rgba(15,15,26,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:999;padding:1rem 5%}
-    nav{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-    .logo{font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:800;background:linear-gradient(90deg,#00d4ff,#ff00c8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .nav-links a{color:var(--text);text-decoration:none;margin-left:2rem;font-weight:600;transition:.3s}
-    .nav-links a:hover{color:var(--accent)}
-    .theme-toggle{background:none;border:none;font-size:1.4rem;cursor:pointer}
-    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 5%;position:relative}
-    .hero h1{font-size:clamp(2.5rem,8vw,5rem);margin-bottom:1rem;background:linear-gradient(90deg,#00d4ff,#ff00c8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .hero p{font-size:1.4rem;max-width:700px;margin:1.5rem 0 2rem;opacity:.9}
-    .cta{padding:1rem 2.5rem;font-size:1.2rem;font-weight:600;background:var(--accent);color:#000;border:none;border-radius:50px;cursor:pointer;transition:.3s;box-shadow:0 10px 30px rgba(0,212,255,.4)}
-    .cta:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,212,255,.6)}
-    .tools,.blog{max-width:1400px;margin:auto auto;padding:0 5%}
-    h2{text-align:center;font-size:3rem;margin-bottom:4rem;background:linear-gradient(90deg,#00d4ff,#ff00c8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:.4s;cursor:pointer}
-    .card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,212,255,.2)}
-    .card h3{font-size:1.5rem;margin-bottom:1rem}
-    .tag{background:rgba(0,212,255,.2);color:var(--accent);padding:.3rem .8rem;border-radius:50px;font-size:.8rem;display:inline-block;margin-top:1rem}
-    .blog{background:none;padding:8rem 5%}
-    .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
-    .blog-card{background:var(--card);border-radius:16px;overflow:hidden;transition:.3s;cursor:pointer}
-    .blog-card img{width:100%;height:200px;object-fit:cover}
-    .blog-card .content{padding:1.5rem}
-    .blog-card h3{margin-bottom:.5rem;font-size:1.3rem}
-    .date{font-size:.9rem;opacity:.7}
-    footer{text-align:center;padding:4rem 5%;border-top:1px solid var(--border)}
-    footer a{color:var(--accent);text-decoration:none}
-    @media(max-width:768px){.nav-links{display:none}}
-  </style>
+    header {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: radial-gradient(circle, #1e293b, #020617);
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: #38bdf8;
+        text-shadow: 0 0 20px #38bdf8;
+    }
+
+    .tagline {
+        font-size: 1.3rem;
+        margin-top: 10px;
+        color: #94a3b8;
+    }
+
+    .highlight {
+        color: #22c55e;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 10px 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    h2 {
+        color: #38bdf8;
+        border-left: 4px solid #38bdf8;
+        padding-left: 10px;
+    }
+
+    .card {
+        background: #1e293b;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(56,189,248,0.4);
+    }
+
+    .skills span {
+        display: inline-block;
+        background: #020617;
+        padding: 8px 12px;
+        margin: 5px;
+        border-radius: 20px;
+        border: 1px solid #38bdf8;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        color: #64748b;
+    }
+
+    a {
+        color: #22c55e;
+        text-decoration: none;
+    }
+
+    .social a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+</style>
+
 </head>
+
 <body>
-  <!-- Snowflakes -->
-  <script>
-    setInterval(()=>{const s=document.createElement('div');s.innerText=['❄','❅','❆'][Math.floor(Math.random()*3)];s.classList.add('snowflake');s.style.left=Math.random()*100+'vw';s.style.animationDuration=Math.random()*5+5+'s';s.style.fontSize=Math.random()*1+0.8+'em';document.body.appendChild(s);setTimeout(()=>s.remove(),10000)},300);
-  </script>
 
-  <header>
-    <nav>
-      <div class="logo">❄️ Snowflakes Tech</div>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/tools/">Tools</a>
-        <a href="/blog/">Blog</a>
-        <a href="/about.html">About</a>
-      </div>
-      <button class="theme-toggle" onclick="document.documentElement.dataset.theme=document.documentElement.dataset.theme==='light'?'dark':'light'">🌙</button>
-    </nav>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero" itemscope itemtype="https://schema.org/WebSite">
-      <h1 itemprop="name">I build tools that make developers <br>10× faster in 2025</h1>
-      <p itemprop="description">Free CSS snowflake generator, one-line gradient maker, dark mode toggle, Twitter header wizard — all open-source, no sign-up, copy-paste ready.</p>
-      <button class="cta" onclick="location.href='/blog/'">Read the $8k/month GitHub Pages SaaS story →</button>
-    </section>
-
-    <!-- TOOLS (Google LOVES tool pages) -->
-    <section class="tools" aria-labelledby="tools-heading">
-      <h2 id="tools-heading">Free Web Dev Tools (50,000+ monthly users)</h2>
-      <div class="grid">
-        <article class="card" onclick="location.href='/tools/css-snowflake-generator.html'">
-          <h3>❄️ CSS Snowflake Generator 2025</h3>
-          <p>Pure CSS animated falling snowflakes in 6 lines. No JavaScript. Used on 3,000+ sites this week.</p>
-          <span class="tag">Live Demo • Copy Code</span>
-        </article>
-        <article class="card" onclick="location.href='/tools/gradient-generator.html'">
-          <h3>🌈 One-Line Gradient Generator</h3>
-          <p>Glassmorphism, duotone, mesh gradients with live preview. Export CSS in 1 click.</p>
-          <span class="tag">Updated Nov 2025</span>
-        </article>
-        <article class="card" onclick="location.href='/tools/twitter-header.html'">
-          <h3>🖼️ Twitter Header Maker</h3>
-          <p>Drag & drop → perfect 1500×500 header with safe-area overlay. Free download.</p>
-          <span class="tag">No watermark</span>
-        </article>
-      </div> 
-    </section>
-
-    <!-- BLOG PREVIEW (Google ranks fresh content) -->
-    <section class="blog" aria-labelledby="blog-heading">
-		 <h2 id="blog-heading"> <a href="/blog/Snowflakes-Roadmap.html" class="btn" target="_blank">Snowflakes in 6 Months</a> </h2>
-  <!--    <div class="blog-grid">
-        <article class="blog-card" onclick="location.href='/blog/8k-saas-github-pages/'">
-          <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&q=80" alt="How I built $8k/month SaaS with GitHub Pages only" loading="lazy">
-          <div class="content">
-            <h3>How I Built a $0→$8k/month SaaS Using Only GitHub Pages (2025 Case Study)</h3>
-            <p class="date">Nov 10, 2025 • 12 min read</p>
-          </div>
-        </article>
-        <article class="blog-card" onclick="location.href='/blog/snowflakes-css/'">
-          <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&q=80" alt="15 one-line CSS snowflake tricks" loading="lazy">
-          <div class="content">
-            <h3>Snowflakes CSS: 15 One-Line Tricks That Look Like Magic (Winter 2025)</h3>
-            <p class="date">Nov 9, 2025 • 8 min read</p>
-          </div>
-        </article>
-        <article class="blog-card" onclick="location.href='/blog/dark-mode-toggle/'">
-          <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=800&q=80" alt="Dark mode toggle in 6 lines of code" loading="lazy">
-          <div class="content">
-            <h3>Dark Mode Toggle in 6 Lines (No Library) – 2025 Edition</h3>
-            <p class="date">Nov 8, 2025 • 5 min read</p>
-          </div>
-        </article>
-      </div> -->
-    </section> 
-  </main>
-
-  <footer>
-    <p>Made with ❤️ by <a href="https://twitter.com/prateekg19951" rel="nofollow">@prateekg19951</a> • 
-       <a href="/privacy-policy.html">Privacy Policy</a> • 
-       <a href="mailto:prateekg19951@gmail.com">Contact</a>
+<header>
+    <h1>Prateek Gupta</h1>
+    <p class="tagline">
+        Data Geek ⚡ | Trader 📈 | Entrepreneur 🚀
     </p>
-  </footer>
+    <p>
+        I <span class="highlight">manipulate data</span>, build insights,  
+        and turn chaos into clarity.
+    </p>
 
-  <!-- GOOGLE ANALYTICS (replace YOUR-UA with real one later) 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MEASUREID');
-  </script> -->
+    <div class="social">
+        <a href="https://www.instagram.com/purelyprateek" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/prateekg19951" target="_blank">LinkedIn</a>
+    </div>
+</header>
+
+<section>
+    <h2>🧠 About Me</h2>
+    <div class="card">
+        <p>
+            I’m someone who doesn’t just look at data — I play with it.  
+            I break it, rebuild it, and extract meaning where others see noise.
+        </p>
+        <p>
+            By day, I work with dashboards, automation, and analytics.  
+            By night, I explore trading strategies and business ideas.
+        </p>
+        <p>
+            I love meeting new people, making connections, and building ideas that matter.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>⚡ What I Do</h2>
+    <div class="card">
+        <ul>
+            <li>📊 Data Analyst & Power BI Developer</li>
+            <li>🤖 Automation & Process Optimization</li>
+            <li>🧠 Data Analysis & Insights Generation</li>
+            <li>📈 Stock Market Trading & Strategy Testing</li>
+            <li>🚀 Entrepreneurial Thinking & Problem Solving</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>🛠 Tech Stack</h2>
+    <div class="card skills">
+        <span>Power BI</span>
+        <span>SQL</span>
+        <span>Advanced Excel</span>
+        <span>Python</span>
+        <span>ETL Tools</span>
+        <span>Google Sheets</span>
+    </div>
+</section>
+
+<section>
+    <h2>🌍 My Mindset</h2>
+    <div class="card">
+        <p>
+            "Data is not just numbers — it's a hidden story waiting to be decoded."
+        </p>
+        <p>
+            I believe in smart systems, continuous learning, and leveraging data to make better decisions.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>🤝 Connect With Me</h2>
+    <div class="card">
+        <p>Email: prateekg19951@gmail.com</p>
+        <p>Phone: +91-8439999933</p>
+        <p>
+            Instagram: 
+            <a href="https://www.instagram.com/purelyprateek" target="_blank">
+                @purelyprateek
+            </a>
+        </p>
+        <p>
+            LinkedIn: 
+            <a href="https://www.linkedin.com/in/prateekg19951" target="_blank">
+                View Profile
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>⚡ Built with curiosity, data & ambition</p>
+</footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
